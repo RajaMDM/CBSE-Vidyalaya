@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+:root {
+  /* CBSE-themed colors */
+  --cbse-primary: #1a237e; /* Deep blue - CBSE official */
+  --cbse-secondary: #ff6f00; /* Saffron accent */
+  --cbse-green: #2e7d32; /* India green */
+  --cbse-bg: #fafafa;
+  --cbse-card: #ffffff;
+  --cbse-text: #1a1a2e;
+  --cbse-text-secondary: #4a4a6a;
+  --cbse-border: #e0e0e0;
+
+  --background: var(--cbse-bg);
+  --foreground: var(--cbse-text);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-cbse-primary: var(--cbse-primary);
+  --color-cbse-secondary: var(--cbse-secondary);
+  --color-cbse-green: var(--cbse-green);
+
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-hindi: "Noto Sans Devanagari", "Mangal", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --cbse-bg: #0a0a1a;
+    --cbse-card: #1a1a2e;
+    --cbse-text: #e0e0e0;
+    --cbse-text-secondary: #a0a0c0;
+    --cbse-border: #2a2a4e;
+  }
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--background);
+  color: var(--foreground);
+}
+
+/* Hindi text styling */
+.hindi-text {
+  font-family: var(--font-hindi);
+}
+
+/* Smooth transitions */
+* {
+  transition-property: background-color, border-color, color;
+  transition-duration: 150ms;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--cbse-border);
+  border-radius: 3px;
+}
+
+/* KaTeX formula styling */
+.katex-display {
+  margin: 1rem 0;
+  overflow-x: auto;
+}
+
+/* Whiteboard canvas */
+.whiteboard-canvas {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Slide transitions */
+.slide-enter {
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+.slide-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 300ms ease-out;
+}
+
+/* Agent avatar pulse */
+@keyframes agent-speaking {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(26, 35, 126, 0.4); }
+  50% { box-shadow: 0 0 0 8px rgba(26, 35, 126, 0); }
+}
+
+.agent-speaking {
+  animation: agent-speaking 1.5s infinite;
+}
