@@ -51,7 +51,7 @@ export async function generateOutline(
   request: GenerationRequest
 ): Promise<GenerationOutline> {
   const subject = getSubjectById(request.subjectId);
-  const chapter = request.chapterId ? getChapterById(request.chapterId) : null;
+  const chapter = request.chapterId ? getChapterById(request.chapterId) : undefined;
 
   const userPrompt = buildOutlinePrompt(request, subject, chapter);
 

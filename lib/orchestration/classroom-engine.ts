@@ -117,7 +117,7 @@ function assignAgentActions(scenes: Scene[], agents: Agent[]): Scene[] {
               id: uuid(),
               type: `wb_draw_${element.type}` as Action["type"],
               agentId: teacher.id,
-              payload: element,
+              payload: element as unknown as Record<string, unknown>,
               delay: 2000 + i * 800,
             });
           }
