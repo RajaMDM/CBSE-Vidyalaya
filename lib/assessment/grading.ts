@@ -4,7 +4,7 @@
 
 import { generateText } from "@/lib/ai";
 import type { LLMMessage } from "@/lib/ai";
-import type { QuizQuestion, CBSEGrade, CBSE_GRADING_SYSTEM } from "@/lib/types";
+import type { QuizQuestion, CBSEGrade } from "@/lib/types";
 
 export interface StudentResponse {
   questionId: string;

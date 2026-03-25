@@ -4,7 +4,7 @@
 
 > **Conceived & Built by [RajaMDM](https://github.com/RajaMDM)** — An AI enthusiast and technologist exploring the intersection of artificial intelligence and Indian education. This project demonstrates the power of AI-driven curriculum design, multi-agent orchestration, and personalized learning at scale.
 
-> *Inspired by [OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) by Tsinghua University*
+> *Architecturally inspired by [OpenMAIC](https://github.com/THU-MAIC/OpenMAIC) (AGPL-3.0) by THU-MAIC, Tsinghua University. This is an independent, from-scratch implementation — no source code was copied. See [LICENSE](./LICENSE) for full attribution details.*
 
 ---
 
@@ -84,8 +84,8 @@ Built on a modular architecture inspired by OpenMAIC:
 ### 1. Clone & Install
 
 ```bash
-git clone https://github.com/RajaMDM/DataManagement.git
-cd DataManagement
+git clone https://github.com/RajaMDM/CBSE-Vidyalaya.git
+cd CBSE-Vidyalaya
 pnpm install
 ```
 
@@ -215,6 +215,12 @@ Contributions are welcome! Areas to help:
 
 ## License
 
-MIT License. Built with passion for Indian education.
+MIT License. See [LICENSE](./LICENSE) for details.
 
-**Inspired by [OpenMAIC](https://github.com/THU-MAIC/OpenMAIC)** — Open Multi-Agent Interactive Classroom by Tsinghua University.
+## Acknowledgments
+
+This project is architecturally inspired by **[OpenMAIC](https://github.com/THU-MAIC/OpenMAIC)** — Open Multi-Agent Interactive Classroom by **THU-MAIC, Tsinghua University** (licensed under AGPL-3.0).
+
+OpenMAIC pioneered the multi-agent interactive classroom concept. CBSE Vidyalaya is an **independent, from-scratch implementation** — no source code was copied from OpenMAIC. The architectural patterns (multi-agent orchestration, generation pipelines, action engine concept) served as design inspiration for this system, which has been purpose-built for the Indian CBSE curriculum with its own codebase, data models, and features.
+
+We gratefully acknowledge the THU-MAIC team for their foundational work in AI-powered education.
